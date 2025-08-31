@@ -1,13 +1,17 @@
 pkgname=sed
 pkgver=4.9
-pkgrel=1
+pkgrel=2
 pkgdesc="GNU stream editor"
 arch=('x86_64')
 url="https://www.gnu.org/software/sed/"
 license=('GPL-3.0-or-later')
 groups=('base' 'base-devel')
-depends=('glibc' 'acl' 'attr')
-options=('!lto')
+depends=(
+    'glibc'
+    'acl'
+    'attr'
+)
+makedepends=('gettext')
 source=(https://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${pkgver}.tar.xz)
 sha256sums=(6e226b732e1cd739464ad6862bd1a1aba42d7982922da7a53519631d24975181)
 
